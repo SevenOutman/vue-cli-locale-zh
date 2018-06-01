@@ -1,0 +1,21 @@
+{
+  "name": "vue-cli-locale-zh",
+  "version": "0.1.0",
+  "description": "Chinese (simplified) localization for @vue/cli",
+  "unpkg": "./locales/zh.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevenOutman/vue-cli-locale-zh.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue-cli",
+    "locale"
+  ],
+  "author": "SevenOutman <leishenghao@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SevenOutman/vue-cli-locale-zh/issues"
+  },
+  "homepage": "https://github.com/SevenOutman/vue-cli-locale-zh#readme"
+}
