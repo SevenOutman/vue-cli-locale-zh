@@ -100,27 +100,27 @@
     },
     "status-bar": {
       "project": {
-        "tooltip": "Current project<br><i>Click to toggle Project Manager</i>",
-        "empty": "No project"
+        "tooltip": "当前项目<br><i>点击进入项目／回到首页</i>",
+        "empty": "（无当前项目）"
       },
       "path": {
-        "tooltip": "Current Working Folder"
+        "tooltip": "当前目录"
       },
       "log": {
-        "tooltip": "Logs<br><i>Click to toggle Vue CLI logs</i>",
-        "empty": "No logs yet"
+        "tooltip": "日志<br><i>点击显示／隐藏 Vue CLI 日志</i>",
+        "empty": "（暂无日志）"
       },
-      "report-bug": "Report bug",
-      "translate": "Help translate"
+      "report-bug": "反馈 bug",
+      "translate": "参与翻译"
     },
     "terminal-view": {
       "buttons": {
-        "clear": "Clear console",
-        "scroll": "Scroll to bottom"
+        "clear": "清空",
+        "scroll": "至底部"
       }
     },
     "top-bar": {
-      "no-favorites": "No favorite projects"
+      "no-favorites": "暂无收藏"
     },
     "view-badge": {
       "labels": {
@@ -265,42 +265,42 @@
       }
     },
     "project-plugins": {
-      "title": "Project plugins",
-      "button": "Add plugin",
-      "heading": "Installed plugins"
+      "title": "插件",
+      "button": "添加插件",
+      "heading": "已安装的插件"
     },
     "project-plugins-add": {
-      "title": "Add a plugin",
-      "plugin": "plugin",
+      "title": "添加插件",
+      "plugin": "插件",
       "tabs": {
         "search": {
-          "label": "Search",
-          "search-input": "Search a plugin",
-          "not-found": "No results found",
+          "label": "所有插件",
+          "search-input": "查找插件",
+          "not-found": "未找到相关插件",
           "buttons": {
-            "cancel": "Cancel",
-            "install": "Install {target}"
+            "cancel": "取消",
+            "install": "安装 {target}"
           }
         },
         "configuration": {
-          "label": "Configuration",
-          "heading": "Installation of {target}",
+          "label": "配置插件",
+          "heading": "安装 {target}",
           "buttons": {
-            "cancel": "Cancel",
-            "finish": "Finish installation"
+            "cancel": "取消",
+            "finish": "完成安装"
           }
         },
         "diff": {
-          "label": "Files changed"
+          "label": "文件改动"
         }
       },
       "modal": {
-        "title": "Uninstall {target}?",
-        "body": "Do you want to uninstall the {target} plugin?",
+        "title": "卸载 {target}？",
+        "body": "确认卸载插件 {target} 吗？",
         "buttons": {
-          "back": "Go back",
+          "back": "不",
           "cancel": "Cancel without uninstalling",
-          "uninstall": "Uninstall"
+          "uninstall": "卸载"
         }
       }
     },
