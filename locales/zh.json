@@ -1,8 +1,8 @@
 {
   "components": {
     "connection-status": {
-      "disconnected": "Disconnected from UI server",
-      "connected": "Connected!"
+      "disconnected": "连接已断开",
+      "connected": "已连接 Vue 项目管理器!"
     },
     "file-diff": {
       "binary": "Binary file not shown",
@@ -37,26 +37,26 @@
     "folder-explorer": {
       "toolbar": {
         "tooltips": {
-          "parent-folder": "Open parent folder",
-          "edit-path": "Edit path",
-          "favorite": "Toggle favorite",
-          "favorite-folders": "Favorite folders",
-          "refresh": "Refresh"
+          "parent-folder": "上一层",
+          "edit-path": "编辑路径",
+          "favorite": "添加/取消收藏",
+          "favorite-folders": "收藏的文件夹",
+          "refresh": "刷新"
         },
-        "placeholder": "Enter the full path to a folder",
-        "empty": "No favorite folders yet."
+        "placeholder": "输入文件夹完整路径",
+        "empty": "暂无收藏"
       }
     },
     "list-item-info": {
-      "more-info": "More Info"
+      "more-info": "查看详情"
     },
     "logger-view": {
-      "title": "Logs",
-      "empty": "Not logs yet",
+      "title": "日志",
+      "empty": "暂无日志",
       "buttons": {
-        "clear": "Clear logs",
-        "scroll": "Scroll to bottom",
-        "close": "Close"
+        "clear": "清空日志",
+        "scroll": "至底部",
+        "close": "关闭"
       }
     },
     "progress-screen": {
@@ -64,32 +64,32 @@
     },
     "project-nav": {
       "tooltips": {
-        "plugins": "Plugins",
-        "configuration": "Configuration",
-        "tasks": "Tasks",
-        "more": "More"
+        "plugins": "插件",
+        "configuration": "配置",
+        "tasks": "任务",
+        "more": "更多"
       }
     },
     "project-select-list": {
-      "empty": "No existing projects",
+      "empty": "没有项目",
       "titles": {
-        "favorite": "Favorite projects",
-        "other": "Other projects"
+        "favorite": "收藏的项目",
+        "other": "更多项目"
       }
     },
     "project-select-list-item": {
       "tooltips": {
-        "favorite": "Toggle favorite",
-        "delete": "Delete"
+        "favorite": "添加/取消收藏",
+        "delete": "删除"
       }
     },
     "project-plugin-item": {
-      "version": "version",
+      "version": "版本",
       "latest": "latest",
-      "official": "Official",
-      "installed": "Installed",
+      "official": "官方",
+      "installed": "已安装",
       "actions": {
-        "update": "Update {target}"
+        "update": "更新 {target}"
       }
     },
     "prompt-list": {
@@ -151,11 +151,11 @@
   "types": {
     "task": {
       "status": {
-        "idle": "Idle",
-        "running": "Running",
-        "done": "Done",
-        "error": "Error",
-        "terminated": "Terminated"
+        "idle": "空闲",
+        "running": "运行中",
+        "done": "已完成",
+        "error": "错误",
+        "terminated": "已中止"
       }
     }
   },
@@ -305,17 +305,17 @@
       }
     },
     "project-configurations": {
-      "title": "Project configuration"
+      "title": "项目配置"
     },
     "project-configuration-details": {
       "actions": {
-        "cancel": "Cancel changes",
-        "save": "Save changes",
-        "more-info": "More info"
+        "cancel": "取消修改",
+        "save": "保存修改",
+        "more-info": "更多信息"
       }
     },
     "project-tasks": {
-      "title": "Project tasks"
+      "title": "任务"
     },
     "project-task-details": {
       "actions": {
@@ -330,11 +330,11 @@
       "output": "Output"
     },
     "about": {
-      "title": "About",
+      "title": "关于",
       "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> is a built-in package of vue-cli which opens a full-blown UI.",
       "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
-      "links": "Useful links",
-      "back": "Go back"
+      "links": "资源链接",
+      "back": "返回"
     }
   },
   "vue-webpack": {
@@ -383,7 +383,7 @@
     },
     "tasks": {
       "serve": {
-        "description": "Compiles and hot-reloads for development",
+        "description": "编译和热更新（用于开发环境）",
         "open": "Open browser on server start",
         "mode": "Specify env mode",
         "host": "Specify host",
@@ -391,7 +391,7 @@
         "https": "Use HTTPS"
       },
       "build": {
-        "description": "Compiles and minifies for production",
+        "description": "编译并压缩（用于生产环境）",
         "mode": "Specify env mode",
         "dest": "Output directory",
         "target": {
@@ -414,17 +414,17 @@
   "eslint": {
     "config": {
       "eslint": {
-        "description": "Error checking & Code quality",
+        "description": "代码质量和纠错",
         "groups": {
-          "strongly-recommended": "Strongly recommended",
-          "recommended": "Recommended"
+          "strongly-recommended": "强烈推荐",
+          "recommended": "推荐"
         }
       },
       "eslint-extra": {
-        "description": "Extra ESLint settings",
+        "description": "更多设置",
         "lintOnSave": {
           "message": "Lint on save",
-          "description": "Automatically lint source files when saved"
+          "description": "每当源文件保存时自动检查"
         }
       }
     },
