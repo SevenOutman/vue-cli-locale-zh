@@ -5,14 +5,14 @@
       "connected": "已连接 Vue 项目管理器!"
     },
     "file-diff": {
-      "binary": "Binary file not shown",
+      "binary": "二进制文件",
       "actions": {
-        "open": "Open in editor"
+        "open": "在编辑器中打开"
       }
     },
     "file-diff-view": {
-      "files-changed": "Files changed",
-      "search-file": "Search file",
+      "files-changed": "文件变化",
+      "search-file": "搜索文件",
       "empty": "No change found",
       "modals": {
         "commit": {
@@ -93,7 +93,7 @@
       }
     },
     "prompt-list": {
-      "default": "Default"
+      "default": "默认"
     },
     "prompts-list": {
       "empty": "No configuration"
@@ -319,15 +319,15 @@
     },
     "project-task-details": {
       "actions": {
-        "play": "Run task",
-        "stop": "Stop task",
-        "close": "Close"
+        "play": "运行",
+        "stop": "停止",
+        "close": "关闭"
       },
-      "command": "Script command",
-      "parameters": "Parameters",
-      "parameters-info": "Parameters will be saved when the task is run.",
-      "more-info": "More Info",
-      "output": "Output"
+      "command": "脚本命令",
+      "parameters": "变量",
+      "parameters-info": "变量将在运行任务时保存",
+      "more-info": "查看详情",
+      "output": "输出"
     },
     "about": {
       "title": "关于",
@@ -339,30 +339,30 @@
   },
   "vue-webpack": {
     "dashboard": {
-      "title": "Dashboard",
-      "open-app": "Open app",
+      "title": "控制台",
+      "open-app": "启动 app",
       "webpack-status": {
-        "Success": "Success",
-        "Failed": "Failed",
-        "Compiling": "Compiling",
+        "Success": "编译成功",
+        "Failed": "编译失败",
+        "Compiling": "编译中",
         "Invalidated": "Invalidated",
-        "Idle": "Idle"
+        "Idle": "空闲"
       },
       "build-status": {
         "labels": {
-          "status": "Status",
-          "errors": "Errors",
-          "warnings": "Warnings",
+          "status": "状态",
+          "errors": "错误",
+          "warnings": "警告",
           "assets": "Assets",
           "modules": "Modules",
-          "deps": "Dependencies"
+          "deps": "依赖项"
         }
       },
       "speed-stats": {
         "title": "Speed stats"
       },
       "module-list": {
-        "title": "Dependencies"
+        "title": "依赖项"
       },
       "asset-list": {
         "title": "Assets",
@@ -370,7 +370,7 @@
       }
     },
     "analyzer": {
-      "title": "Analyzer",
+      "title": "分析",
       "go-up": "Go up",
       "go-home": "Go to home",
       "chunk": "Chunk"
@@ -384,30 +384,30 @@
     "tasks": {
       "serve": {
         "description": "编译和热更新（用于开发环境）",
-        "open": "Open browser on server start",
-        "mode": "Specify env mode",
-        "host": "Specify host",
-        "port": "Specify port",
-        "https": "Use HTTPS"
+        "open": "在浏览器中启动",
+        "mode": "环境",
+        "host": "域名",
+        "port": "端口",
+        "https": "启用 HTTPS"
       },
       "build": {
         "description": "编译并压缩（用于生产环境）",
-        "mode": "Specify env mode",
-        "dest": "Output directory",
+        "mode": "环境",
+        "dest": "输出目录",
         "target": {
-          "description": "Build target",
-          "app": "Web app",
-          "lib": "Library",
-          "wc": "Web component",
-          "wc-async": "Async web component"
+          "description": "构建类型",
+          "app": "App",
+          "lib": "库",
+          "wc": "组件",
+          "wc-async": "异步组件"
         },
-        "name": "Name for library or web-component mode (default: 'name' in package.json or entry filename)",
-        "watch": "Watch for changes"
+        "name": "库名/组件名 (默认为 package.json 的 name 或 entry 文件名)",
+        "watch": "监听变化"
       },
       "inspect": {
-        "description": "Inspect the resolved webpack config",
-        "mode": "Specify env mode",
-        "verbose": "Show full function definitions in output"
+        "description": "检查 webpack 配置",
+        "mode": "环境",
+        "verbose": "完整显示函数定义"
       }
     }
   },
@@ -430,8 +430,8 @@
     },
     "tasks": {
       "lint": {
-        "description": "Lints and fixes files",
-        "noFix": "Do not fix errors"
+        "description": "检查并修复源文件",
+        "noFix": "仅检查，不要自动修复错误"
       }
     }
   },
