@@ -11,27 +11,27 @@
       }
     },
     "file-diff-view": {
-      "files-changed": "文件变化",
+      "files-changed": "文件改动",
       "search-file": "搜索文件",
-      "empty": "No change found",
+      "empty": "没有改动",
       "modals": {
         "commit": {
-          "title": "Commit changes",
-          "input": "Enter a commit message",
-          "subtitle": "Record changes to the repository",
+          "title": "提交信息",
+          "input": "输入提交信息",
+          "subtitle": "记录下做了哪些改动",
           "actions": {
-            "commit": "Commit",
-            "cancel": "Cancel"
+            "commit": "提交",
+            "cancel": "取消"
           }
         }
       },
       "actions": {
-        "collapse-all": "Collapse all",
-        "expand-all": "Expand all",
-        "commit": "Commit changes",
-        "skip": "Skip",
-        "continue": "Continue",
-        "refresh": "Refresh"
+        "collapse-all": "折叠全部",
+        "expand-all": "展开全部",
+        "commit": "提交修改",
+        "skip": "跳过",
+        "continue": "继续",
+        "refresh": "刷新"
       }
     },
     "folder-explorer": {
@@ -60,7 +60,7 @@
       }
     },
     "progress-screen": {
-      "close": "Close"
+      "close": "关闭"
     },
     "project-nav": {
       "tooltips": {
@@ -96,7 +96,7 @@
       "default": "默认"
     },
     "prompts-list": {
-      "empty": "No configuration"
+      "empty": "（暂无配置）"
     },
     "status-bar": {
       "project": {
@@ -125,27 +125,27 @@
     "view-badge": {
       "labels": {
         "tasks": {
-          "error": "Error status",
-          "running": "Running status",
-          "done": "Done status"
+          "error": "错误",
+          "running": "运行中",
+          "done": "已完成"
         }
       }
     }
   },
   "mixins": {
     "progress": {
-      "creating": "Creating project...",
-      "git-init": "Initializing git repository...",
-      "plugins-install": "Installing Vue CLI plugins. This might take a while...",
+      "creating": "正在创建项目...",
+      "git-init": "初始化 Git 仓库...",
+      "plugins-install": "正在安装 Vue CLI 插件. 这需要一点时间...",
       "invoking-generators": "Invoking generators...",
       "deps-install": "Installing additional dependencies...",
       "completion-hooks": "Running completion hooks...",
       "fetch-remote-preset": "Fetching remote preset...",
-      "done": "Successfully created project",
-      "plugin-install": "Installing {arg0}...",
-      "plugin-uninstall": "Uninstalling {arg0}...",
+      "done": "项目创建成功",
+      "plugin-install": "正在安装 {arg0}...",
+      "plugin-uninstall": "正在卸载 {arg0}...",
       "plugin-invoke": "Invoking {arg0}...",
-      "plugin-update": "Updating {arg0}..."
+      "plugin-update": "正在更新 {arg0}..."
     }
   },
   "types": {
@@ -359,20 +359,20 @@
         }
       },
       "speed-stats": {
-        "title": "Speed stats"
+        "title": "速度统计"
       },
       "module-list": {
         "title": "依赖项"
       },
       "asset-list": {
-        "title": "Assets",
+        "title": "资源",
         "size-warning": "This asset is big, consider using Code splitting to create smaller assets."
       }
     },
     "analyzer": {
       "title": "分析",
-      "go-up": "Go up",
-      "go-home": "Go to home",
+      "go-up": "上一层",
+      "go-home": "主目录",
       "chunk": "Chunk"
     },
     "sizes": {
@@ -444,12 +444,12 @@
           "description": "This allows you to the choose between the two modes supported by the underlying `workbox-webpack-plugin`"
         },
         "name": {
-          "message": "App name",
+          "message": "App 名",
           "description": "App name displayed on the Splash screen and various other places. Also used as the value for the `apple-mobile-web-app-title` meta tag in the generated HTML."
         },
         "themeColor": {
-          "message": "Theme color",
-          "description": "Color used to theme the browser"
+          "message": "主题色",
+          "description": "显示在浏览器中的主题色"
         },
         "backgroundColor": {
           "message": "Splash background color",
@@ -461,7 +461,7 @@
         },
         "appleMobileWebAppStatusBarStyle": {
           "message": "Apple mobile status bar style",
-          "description": "Style for the web app status bar on iOS"
+          "description": "iOS webapp 状态栏样式"
         }
       }
     }
