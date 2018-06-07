@@ -441,26 +441,26 @@
         "description": "Progressive Web App",
         "workboxPluginMode": {
           "message": "Plugin mode",
-          "description": "This allows you to the choose between the two modes supported by the underlying `workbox-webpack-plugin`"
+          "description": "用于配置 `workbox-webpack-plugin`"
         },
         "name": {
           "message": "App 名",
-          "description": "App name displayed on the Splash screen and various other places. Also used as the value for the `apple-mobile-web-app-title` meta tag in the generated HTML."
+          "description": "用于启动页显示、 `apple-mobile-web-app-title` 等处"
         },
         "themeColor": {
           "message": "主题色",
           "description": "显示在浏览器中的主题色"
         },
         "backgroundColor": {
-          "message": "Splash background color",
-          "description": "Background color used for the app splash screen"
+          "message": "启动页背景色",
+          "description": "启动页（闪屏页）背景色"
         },
         "msTileColor": {
-          "message": "Windows app tile color",
-          "description": "Color used for the app tile on Windows"
+          "message": "Windows 磁贴颜色",
+          "description": "Windows 磁贴颜色"
         },
         "appleMobileWebAppStatusBarStyle": {
-          "message": "Apple mobile status bar style",
+          "message": "Apple 状态栏样式",
           "description": "iOS webapp 状态栏样式"
         }
       }
@@ -469,18 +469,18 @@
   "cypress": {
     "tasks": {
       "test": {
-        "description": "Run e2e tests with `cypress run`",
-        "headless": "Run in headless mode without GUI",
-        "mode": "Specify the mode the dev server should run in",
-        "url": "Run e2e tests against given url instead of auto-starting dev server"
+        "description": "使用 `cypress run` 运行 e2e 测试",
+        "headless": "不显示 GUI",
+        "mode": "环境",
+        "url": "远程测试 URL"
       }
     }
   },
   "nightwatch": {
     "tasks": {
       "test": {
-        "description": "Run e2e tests with nightwatch",
-        "url": "Run e2e tests against given url instead of auto-starting dev server"
+        "description": "使用 nightwatch 运行 e2e 测试",
+        "url": "远程测试 URL"
       }
     }
   }
