@@ -44,7 +44,18 @@
           "refresh": "刷新"
         },
         "placeholder": "输入文件夹完整路径",
-        "empty": "暂无收藏"
+        "empty": "暂无收藏",
+        "show-hidden": "显示隐藏文件夹"
+      },
+      "new-folder": {
+        "action": "新建文件夹",
+        "title": "新建文件夹",
+        "field": {
+          "title": "文件夹名",
+          "subtitle": "你可以使用路径分隔符来创建嵌套的文件夹"
+        },
+        "cancel": "取消",
+        "create": "创建"
       }
     },
     "list-item-info": {
@@ -85,7 +96,7 @@
     },
     "project-plugin-item": {
       "version": "版本",
-      "latest": "latest",
+      "latest": "最新",
       "official": "官方",
       "installed": "已安装",
       "actions": {
@@ -111,7 +122,16 @@
         "empty": "（暂无日志）"
       },
       "report-bug": "反馈 bug",
-      "translate": "参与翻译"
+      "translate": "参与翻译",
+      "dark-mode": "夜间模式",
+      "reset-plugin-api": "Refresh plugins API"
+    },
+    "suggestion-bar": {
+      "suggestion": "Suggestion",
+      "modal": {
+        "cancel": "Cancel",
+        "continue": "Continue"
+      }
     },
     "terminal-view": {
       "buttons": {
@@ -137,15 +157,16 @@
       "creating": "正在创建项目...",
       "git-init": "初始化 Git 仓库...",
       "plugins-install": "正在安装 Vue CLI 插件. 这需要一点时间...",
-      "invoking-generators": "Invoking generators...",
-      "deps-install": "Installing additional dependencies...",
-      "completion-hooks": "Running completion hooks...",
-      "fetch-remote-preset": "Fetching remote preset...",
+      "invoking-generators": "正在生成项目...",
+      "deps-install": "正在安装依赖...",
+      "completion-hooks": "即将完成...",
+      "fetch-remote-preset": "拉取远程预设...",
       "done": "项目创建成功",
       "plugin-install": "正在安装 {arg0}...",
       "plugin-uninstall": "正在卸载 {arg0}...",
-      "plugin-invoke": "Invoking {arg0}...",
-      "plugin-update": "正在更新 {arg0}..."
+      "plugin-invoke": "正在调用 {arg0}...",
+      "plugin-update": "正在更新 {arg0}...",
+      "plugins-update": "正在更新 {arg0} 个插件..."
     }
   },
   "types": {
@@ -170,6 +191,13 @@
       "buttons": {
         "create": "在此创建新项目",
         "import": "导入这个文件夹"
+      },
+      "import": {
+        "no-modules": {
+          "title": "Missing modules",
+          "message": "It seems the project is missing the 'node_modules' folder. Please check you installed the dependencies before importing.",
+          "close": "Got it"
+        }
       }
     },
     "project-create": {
@@ -182,7 +210,9 @@
               "label": "项目文件夹",
               "placeholder": "my-app",
               "tooltip": "修改项目路径",
-              "action": "选定"
+              "action": "选定",
+              "folder-exists": "文件夹已存在",
+              "folder-name-invalid": "无效的文件夹名"
             },
             "manager": {
               "label": "包管理器",
@@ -190,7 +220,10 @@
             },
             "options": {
               "label": "更多选项",
-              "description": "若目标文件夹已存在则将其覆盖"
+              "force": "若目标文件夹已存在则将其覆盖",
+              "git-title": "Git",
+              "git": "初始化 git 仓库 (建议)",
+              "git-commit-message": "初始提交信息 (选填)"
             }
           },
           "buttons": {
@@ -216,7 +249,7 @@
             "create": "创建项目"
           },
           "modal": {
-            "title": "Configure Remote preset",
+            "title": "配置远程预设",
             "body": "敬请期待…"
           },
           "manual": {
@@ -224,8 +257,16 @@
             "description": "手动配置项目"
           },
           "remote": {
-            "name": "Remote preset",
-            "description": "从 git 仓库拉取预设"
+            "name": "远程预设",
+            "description": "从 git 仓库拉取预设",
+            "url": {
+              "title": "URL",
+              "subtitle": "Git 仓库地址, 如 'username/repo'. 可以使用前缀如 'gitlab:' 或 'bitbucket:'."
+            },
+            "options": "选项",
+            "clone": "这是私有仓库",
+            "cancel": "取消",
+            "done": "完成"
           },
           "default-preset": "默认"
         },
@@ -267,7 +308,8 @@
     "project-plugins": {
       "title": "插件",
       "button": "添加插件",
-      "heading": "已安装的插件"
+      "heading": "已安装的插件",
+      "update-all": "更新所有插件"
     },
     "project-plugins-add": {
       "title": "添加插件",
@@ -311,7 +353,8 @@
       "actions": {
         "cancel": "取消修改",
         "save": "保存修改",
-        "more-info": "更多信息"
+        "more-info": "更多信息",
+        "refresh": "刷新"
       }
     },
     "project-tasks": {
@@ -335,6 +378,23 @@
       "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
       "links": "资源链接",
       "back": "返回"
+    }
+  },
+  "cli-service": {
+    "suggestions": {
+      "vue-router-add": {
+        "label": "添加 vue-router",
+        "message": "Official library to support multiple virtual pages in a Single-Page App. Each route renders a different component."
+      },
+      "vuex-add": {
+        "label": "添加 vuex",
+        "message": "Official centralized State Management solution for large-scale apps. Very useful if multiple components need to access the same data."
+      },
+      "vue-devtools": {
+        "label": "安装 devtools",
+        "message": "Browser devtools official extension for debugging Vue.js applications where you can inspect your components, vuex store and events."
+      },
+      "progress": "正在安装 {arg0}..."
     }
   },
   "vue-webpack": {
@@ -381,6 +441,7 @@
       "gzip": "Gzip",
       "help": "<b>Stats:</b> size from webpack stats data.<br><b>Parsed:</b> size from extracted source (after minification plugins). More accurate.<br><b>Gzip:</b> size of gzipped extracted source."
     },
+    "modern-mode": "Show modern build",
     "tasks": {
       "serve": {
         "description": "编译和热更新（用于开发环境）",
@@ -402,13 +463,67 @@
           "wc-async": "异步组件"
         },
         "name": "库名/组件名 (默认为 package.json 的 name 或 entry 文件名)",
-        "watch": "监听变化"
+        "watch": "监听变化",
+        "modern": {
+          "label": "Modern mode",
+          "description": "Build app targeting modern browsers with auto fallback"
+        }
       },
       "inspect": {
         "description": "检查 webpack 配置",
         "mode": "环境",
         "verbose": "完整显示函数定义"
       }
+    },
+    "config": {
+      "vue-cli": {
+        "description": "配置 Vue 项目",
+        "groups": {
+          "general": "基础设置",
+          "css": "CSS 设置"
+        },
+        "baseUrl": {
+          "label": "Base URL",
+          "description": "The base URL your application will be deployed at, for example '/my-app/'. Use an empty string ('') so that all assets are linked using relative paths."
+        },
+        "outputDir": {
+          "label": "Output directory",
+          "description": "The directory where the production build files will be generated"
+        },
+        "assetsDir": {
+          "label": "Assets directory",
+          "description": "A directory to nest generated static assets (js, css, img, fonts) under."
+        },
+        "runtimeCompiler": {
+          "label": "Enable runtime compiler",
+          "description": "This will allow you to use the template option in Vue components, but will incur around an extra 10kb payload for your app."
+        },
+        "productionSourceMap": {
+          "label": "Enable Production Source Maps",
+          "description": "Disabling this can speed up production builds if you don't need source maps for production"
+        },
+        "parallel": {
+          "label": "Parallel compilation",
+          "description": "Whether to use multiple processors to compile Babel or Typescript."
+        },
+        "css": {
+          "modules": {
+            "label": "Enable CSS Modules",
+            "description": "By default, only files that ends in *.module.[ext] are treated as CSS modules. Enabling this will treat all style files as CSS modules."
+          },
+          "extract": {
+            "label": "Extract CSS",
+            "description": "Whether to extract CSS in your components into a standalone CSS files (instead of inlined in JavaScript and injected dynamically)."
+          },
+          "sourceMap": {
+            "label": "Enable CSS Source Maps",
+            "description": "Whether to enable source maps for CSS. Enabling this may affect build performance."
+          }
+        }
+      }
+    },
+    "suggestions": {
+      "vue-config-open": "Open vue config"
     }
   },
   "eslint": {
@@ -418,13 +533,16 @@
         "groups": {
           "strongly-recommended": "强烈推荐",
           "recommended": "推荐"
-        }
-      },
-      "eslint-extra": {
-        "description": "更多设置",
-        "lintOnSave": {
-          "message": "Lint on save",
-          "description": "每当源文件保存时自动检查"
+        },
+        "vue": {
+          "label": "Vue"
+        },
+        "extra": {
+          "label": "更多设置",
+          "lintOnSave": {
+            "message": "Lint on save",
+            "description": "每当源文件保存时自动检查"
+          }
         }
       }
     },
@@ -432,6 +550,11 @@
       "lint": {
         "description": "检查并修复源文件",
         "noFix": "仅检查，不要自动修复错误"
+      }
+    },
+    "suggestions": {
+      "open-eslintrc": {
+        "label": "打开 eslintrc"
       }
     }
   },
@@ -464,6 +587,14 @@
           "description": "iOS webapp 状态栏样式"
         }
       }
+    },
+    "suggestions": {
+      "open-vue": {
+        "label": "Open vue config"
+      },
+      "open-manifest": {
+        "label": "Open manifest"
+      }
     }
   },
   "cypress": {
@@ -480,7 +611,27 @@
     "tasks": {
       "test": {
         "description": "使用 nightwatch 运行 e2e 测试",
-        "url": "远程测试 URL"
+        "url": "远程测试 URL",
+        "config": "Use custom nightwatch config file (overrides internals)",
+        "env": "Comma-delimited browser envs to run in"
+      }
+    }
+  },
+  "jest": {
+    "tasks": {
+      "test": {
+        "description": "Run unit tests with Jest",
+        "watch": "Watch files for changes and rerun tests related to changed files",
+        "notify": "Display a notification after each run",
+        "update": "Re-record every snapshot that fails during this test run"
+      }
+    }
+  },
+  "mocha": {
+    "tasks": {
+      "test": {
+        "description": "Run unit tests with Mocha",
+        "watch": "Watch files for changes and rerun tests related to changed files"
       }
     }
   }
