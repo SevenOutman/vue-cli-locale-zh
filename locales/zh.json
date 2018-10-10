@@ -222,9 +222,9 @@
           },
           "import": {
             "no-modules": {
-              "title": "Missing modules",
-              "message": "It seems the project is missing the 'node_modules' folder. Please check you installed the dependencies before importing.",
-              "close": "Got it"
+              "title": "找不到依赖",
+              "message": "此文件夹缺少 'node_modules'。请安装依赖后再尝试导入。",
+              "close": "知道了"
             }
           }
         },
@@ -236,7 +236,7 @@
               "form": {
                 "folder": {
                   "label": "项目文件夹",
-                  "placeholder": "my-app",
+                  "placeholder": "输入项目名",
                   "tooltip": "修改项目路径",
                   "action": "选定",
                   "folder-exists": "文件夹已存在",
@@ -350,7 +350,7 @@
               "buttons": {
                 "cancel": "取消",
                 "install": "安装 {target}",
-                "default-install": "Install"
+                "default-install": "安装"
               }
             },
             "configuration": {
@@ -424,7 +424,7 @@
         "about": {
           "title": "关于",
           "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> is a built-in package of vue-cli which opens a full-blown UI.",
-          "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
+          "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be able to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
           "links": "资源链接",
           "back": "返回"
         }
@@ -433,11 +433,11 @@
         "suggestions": {
           "vue-router-add": {
             "label": "添加 vue-router",
-            "message": "Official library to support multiple virtual pages in a Single-Page App. Each route renders a different component."
+            "message": "官方 SPA 路由库"
           },
           "vuex-add": {
             "label": "添加 vuex",
-            "message": "Official centralized State Management solution for large-scale apps. Very useful if multiple components need to access the same data."
+            "message": "官方状态管理库"
           },
           "vue-devtools": {
             "label": "安装 devtools",
@@ -580,18 +580,31 @@
           "eslint": {
             "description": "代码质量和纠错",
             "groups": {
+              "base": "Base",
+              "essential": "必要",
               "strongly-recommended": "强烈推荐",
-              "recommended": "推荐"
+              "recommended": "推荐",
+              "uncategorized": "Uncategorized"
             },
-            "vue": {
-              "label": "Vue"
+            "setting": {
+              "off": "关闭",
+              "error": "错误",
+              "warning": "警告",
+              "custom": "Custom"
             },
-            "extra": {
-              "label": "更多设置",
+            "general": {
+              "label": "General",
               "lintOnSave": {
-                "message": "Lint on save",
-                "description": "每当源文件保存时自动检查"
+                "message": "保存时检查",
+                "description": "当文件保存时自动检查"
+              },
+              "config": {
+                "message": "选择配置",
+                "description": "选择预设配置"
               }
+            },
+            "rules": {
+              "label": "规则"
             }
           }
         },
