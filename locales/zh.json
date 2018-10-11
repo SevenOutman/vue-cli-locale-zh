@@ -192,7 +192,7 @@
           "plugin-update": "正在更新 {arg0}...",
           "plugins-update": "正在更新 {arg0} 个插件...",
           "dependency-install": "正在安装 {arg0}...",
-          "dependency-uninstall": "正在卸载 {arg0}...",
+          "dependency-uninstall": "正在写在 {arg0}...",
           "dependency-update": "正在更新 {arg0}...",
           "dependencies-update": "正在更新 {arg0} 个依赖项..."
         }
@@ -423,8 +423,8 @@
         },
         "about": {
           "title": "关于",
-          "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> is a built-in package of vue-cli which opens a full-blown UI.",
-          "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be able to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
+          "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> 是 vue-cli 内置的一套成熟的 UI。",
+          "quote": "Vue-cli 的 3.x 版本由内到外完全重写，带来了许多很棒的新特性。你可以在你的项目中选用路由、Vuex 和 Typescript 等等特性，并为项目添加“vue-cli 插件”。不过，这么多的选项也意味着它更加复杂，难以上手。因此我们认为，相比局限的命令行界面，一个成熟的 GUI 更能帮助你发掘这些新特性，搜索和安装 vue-cli 插件，解锁更多可能。总的来说，vue-cli 不仅能让你轻松启动新项目，并且在后续的工作中仍会是你的得力助手。",
           "links": "资源链接",
           "back": "返回"
         }
@@ -441,7 +441,7 @@
           },
           "vue-devtools": {
             "label": "安装 devtools",
-            "message": "Browser devtools official extension for debugging Vue.js applications where you can inspect your components, vuex store and events."
+            "message": "官方浏览器插件，用于调试 Vue.js 应用。你可以检查组件、vuex store 和事件等。"
           },
           "progress": "正在安装 {arg0}..."
         }
@@ -454,7 +454,7 @@
             "Success": "编译成功",
             "Failed": "编译失败",
             "Compiling": "编译中",
-            "Invalidated": "Invalidated",
+            "Invalidated": "无效",
             "Idle": "空闲"
           },
           "build-status": {
@@ -462,8 +462,8 @@
               "status": "状态",
               "errors": "错误",
               "warnings": "警告",
-              "assets": "Assets",
-              "modules": "Modules",
+              "assets": "资源",
+              "modules": "模块",
               "deps": "依赖项"
             }
           },
@@ -475,7 +475,7 @@
           },
           "asset-list": {
             "title": "资源",
-            "size-warning": "This asset is big, consider using Code splitting to create smaller assets."
+            "size-warning": "资源过大，可以使用代码拆分来创建更小的资源。"
           }
         },
         "analyzer": {
@@ -515,7 +515,7 @@
             "watch": "监听变化",
             "modern": {
               "label": "Modern mode",
-              "description": "Build app targeting modern browsers with auto fallback"
+              "description": "针对现代浏览器构建应用，自动向后兼容。"
             }
           },
           "inspect": {
@@ -533,18 +533,18 @@
             },
             "baseUrl": {
               "label": "Base URL",
-              "description": "The base URL your application will be deployed at, for example '/my-app/'. Use an empty string ('') so that all assets are linked using relative paths."
+              "description": "应用的部署地址，如 '/my-app/'。如果留空，所有资源将使用相对路径。"
             },
             "outputDir": {
-              "label": "Output directory",
-              "description": "The directory where the production build files will be generated"
+              "label": "输出目录",
+              "description": "构建产生的文件将会生成在这里。"
             },
             "assetsDir": {
-              "label": "Assets directory",
+              "label": "资源目录",
               "description": "A directory to nest generated static assets (js, css, img, fonts) under."
             },
             "runtimeCompiler": {
-              "label": "Enable runtime compiler",
+              "label": "启用运行时编译",
               "description": "This will allow you to use the template option in Vue components, but will incur around an extra 10kb payload for your app."
             },
             "productionSourceMap": {
@@ -552,8 +552,8 @@
               "description": "Disabling this can speed up production builds if you don't need source maps for production"
             },
             "parallel": {
-              "label": "Parallel compilation",
-              "description": "Whether to use multiple processors to compile Babel or Typescript."
+              "label": "并行编译",
+              "description": "使用多个处理器来编译 Babel 或 Typescript。"
             },
             "css": {
               "modules": {
@@ -561,18 +561,18 @@
                 "description": "By default, only files that ends in *.module.[ext] are treated as CSS modules. Enabling this will treat all style files as CSS modules."
               },
               "extract": {
-                "label": "Extract CSS",
-                "description": "Whether to extract CSS in your components into a standalone CSS files (instead of inlined in JavaScript and injected dynamically)."
+                "label": "抽取 CSS",
+                "description": "将组件中的样式抽取为单独的样式文件（不开启则使用 JavaScript 动态注入样式）。"
               },
               "sourceMap": {
-                "label": "Enable CSS Source Maps",
-                "description": "Whether to enable source maps for CSS. Enabling this may affect build performance."
+                "label": "启用 CSS Source Map",
+                "description": "启用对构建性能稍有影响。"
               }
             }
           }
         },
         "suggestions": {
-          "vue-config-open": "Open vue config"
+          "vue-config-open": "打开 vue 配置"
         }
       },
       "eslint": {
@@ -580,20 +580,20 @@
           "eslint": {
             "description": "代码质量和纠错",
             "groups": {
-              "base": "Base",
+              "base": "基本",
               "essential": "必要",
               "strongly-recommended": "强烈推荐",
               "recommended": "推荐",
-              "uncategorized": "Uncategorized"
+              "uncategorized": "未分类"
             },
             "setting": {
               "off": "关闭",
               "error": "错误",
               "warning": "警告",
-              "custom": "Custom"
+              "custom": "自定义"
             },
             "general": {
-              "label": "General",
+              "label": "通用",
               "lintOnSave": {
                 "message": "保存时检查",
                 "description": "当文件保存时自动检查"
@@ -625,7 +625,7 @@
           "pwa": {
             "description": "Progressive Web App",
             "workboxPluginMode": {
-              "message": "Plugin mode",
+              "message": "插件模式",
               "description": "用于配置 `workbox-webpack-plugin`"
             },
             "name": {
@@ -652,10 +652,10 @@
         },
         "suggestions": {
           "open-vue": {
-            "label": "Open vue config"
+            "label": "打开 vue 配置"
           },
           "open-manifest": {
-            "label": "Open manifest"
+            "label": "打开 manifest"
           }
         }
       },
@@ -682,7 +682,7 @@
       "jest": {
         "tasks": {
           "test": {
-            "description": "Run unit tests with Jest",
+            "description": "运行 Jest 单元测试",
             "watch": "Watch files for changes and rerun tests related to changed files",
             "notify": "Display a notification after each run",
             "update": "Re-record every snapshot that fails during this test run"
@@ -692,7 +692,7 @@
       "mocha": {
         "tasks": {
           "test": {
-            "description": "Run unit tests with Mocha",
+            "description": "运行 Mocha 单元测试",
             "watch": "Watch files for changes and rerun tests related to changed files"
           }
         }
