@@ -541,7 +541,7 @@
             },
             "assetsDir": {
               "label": "资源目录",
-              "description": "A directory to nest generated static assets (js, css, img, fonts) under."
+              "description": "静态资源会生成在这里。"
             },
             "runtimeCompiler": {
               "label": "启用运行时编译",
@@ -557,8 +557,8 @@
             },
             "css": {
               "modules": {
-                "label": "Enable CSS Modules",
-                "description": "By default, only files that ends in *.module.[ext] are treated as CSS modules. Enabling this will treat all style files as CSS modules."
+                "label": "启用 CSS Modules",
+                "description": "默认只有 *.module.[ext] 文件名被视为 CSS modules 文件。启用后将所有样式文件视为 CSS modules。"
               },
               "extract": {
                 "label": "抽取 CSS",
@@ -623,7 +623,7 @@
       "pwa": {
         "config": {
           "pwa": {
-            "description": "Progressive Web App",
+            "description": "PWA",
             "workboxPluginMode": {
               "message": "插件模式",
               "description": "用于配置 `workbox-webpack-plugin`"
@@ -674,8 +674,8 @@
           "test": {
             "description": "使用 nightwatch 运行 e2e 测试",
             "url": "远程测试 URL",
-            "config": "Use custom nightwatch config file (overrides internals)",
-            "env": "Comma-delimited browser envs to run in"
+            "config": "使用自定义 nightwatch 配置文件",
+            "env": "浏览器环境（用逗号分隔）"
           }
         }
       },
@@ -683,9 +683,9 @@
         "tasks": {
           "test": {
             "description": "运行 Jest 单元测试",
-            "watch": "Watch files for changes and rerun tests related to changed files",
-            "notify": "Display a notification after each run",
-            "update": "Re-record every snapshot that fails during this test run"
+            "watch": "监听文件变化并重新运行测试",
+            "notify": "每次运行后显示通知",
+            "update": "为每次失败的测试保存快照"
           }
         }
       },
@@ -693,7 +693,7 @@
         "tasks": {
           "test": {
             "description": "运行 Mocha 单元测试",
-            "watch": "Watch files for changes and rerun tests related to changed files"
+            "watch": "监听文件变化并重新运行测试"
           }
         }
       }
