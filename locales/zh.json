@@ -1,7 +1,19 @@
 {
   "org": {
     "vue": {
+      "common": {
+        "close": "关闭",
+        "cancel": "取消",
+        "back": "返回",
+        "more-info": "更多信息",
+        "show-more": "展示更多",
+        "show-less": "展示更少"
+      },
       "components": {
+        "client-addon-component": {
+          "timeout": "组件加载超时",
+          "timeout-info": "自定义组件加载超时，可能出现了错误"
+        },
         "connection-status": {
           "disconnected": "连接已断开",
           "connected": "已连接 Vue 项目管理器!"
@@ -78,6 +90,7 @@
         },
         "project-nav": {
           "tooltips": {
+            "dashboard": "控制台",
             "plugins": "插件",
             "dependencies": "依赖",
             "configuration": "配置",
@@ -99,13 +112,27 @@
             "open-in-editor": "在编辑器中打开"
           }
         },
+        "project-rename": {
+          "title": "重命名",
+          "name-field": {
+            "title": "名称",
+            "subtitle": "输入新的名称"
+          },
+          "submit": "重命名"
+        },
         "project-plugin-item": {
           "version": "版本",
           "latest": "最新",
           "official": "官方",
           "installed": "已安装",
           "actions": {
-            "update": "更新 {target}"
+            "update": "更新 {target}",
+            "refresh": "强制刷新{target}<br><i>按下[Shift]来快速刷新(node_modules将不会更新)</i>"
+          },
+          "local": "本地",
+          "features": {
+            "generator": "此插件拥有generator，可以修改和新增你的项目文件。",
+            "ui-integration": "此插件包含其他UI功能，如增强任务，配置屏幕，仪表板小部件......"
           }
         },
         "project-dependency-item": {
@@ -157,7 +184,8 @@
         "terminal-view": {
           "buttons": {
             "clear": "清空",
-            "scroll": "至底部"
+            "scroll": "至底部",
+            "content-copy": "复制内容"
           }
         },
         "top-bar": {
@@ -173,6 +201,24 @@
               "running": "运行中",
               "done": "已完成"
             }
+          }
+        },
+        "widget": {
+          "remove": "删除widget",
+          "configure": "配置widget",
+          "save": "保存",
+          "reset-config": "重置设置",
+          "open-details": "展示更多"
+        },
+        "widget-add-pane": {
+          "title": "添加widgets"
+        },
+        "widget-add-item": {
+          "add": "添加widget",
+          "details": {
+            "title": "Widget详情",
+            "max-instances": "最大实例数量 {count}/{total}",
+            "unlimited": "无限"
           }
         }
       },
@@ -225,7 +271,8 @@
               "title": "找不到依赖",
               "message": "此文件夹缺少 'node_modules'。请安装依赖后再尝试导入。",
               "close": "知道了"
-            }
+            },
+            "force": "强制导入"
           }
         },
         "project-create": {
@@ -249,6 +296,7 @@
                 "options": {
                   "label": "更多选项",
                   "force": "若目标文件夹已存在则将其覆盖",
+                  "bare": "没有新手说明的脚手架",
                   "git-title": "Git",
                   "git": "初始化 git 仓库 (建议)",
                   "git-commit-message": "初始提交信息 (选填)"
@@ -370,9 +418,18 @@
             "body": "确认卸载插件 {target} 吗？",
             "buttons": {
               "back": "不",
-              "cancel": "Cancel without uninstalling",
+              "cancel": "在不卸载的情况下取消",
               "uninstall": "卸载"
             }
+          },
+          "buttons": {
+            "add-local": "浏览本地插件"
+          }
+        },
+        "project-plugin-add-local": {
+          "title": "添加一个本地插件",
+          "buttons": {
+            "add": "添加本地插件"
           }
         },
         "project-configurations": {
@@ -387,7 +444,8 @@
           }
         },
         "project-tasks": {
-          "title": "任务"
+          "title": "任务",
+          "refresh": "刷新任务"
         },
         "project-task-details": {
           "actions": {
@@ -399,7 +457,11 @@
           "command": "脚本命令",
           "parameters": "变量",
           "more-info": "查看详情",
-          "output": "输出"
+          "output": "输出",
+          "override-args": {
+            "message": "覆盖hard-coded arguments",
+            "description": "如果启用, 你的package.json中的hard-coded arguments将会被以下参数替换"
+          }
         },
         "project-dependencies": {
           "title": "项目依赖",
@@ -420,6 +482,14 @@
             "cancel": "取消",
             "uninstall": "卸载 {id}"
           }
+        },
+        "project-dashboard": {
+          "title": "项目控制台",
+          "cutomize": "定制",
+          "done": "完成"
+        },
+        "settings": {
+          "title": "设置"
         },
         "about": {
           "title": "关于",
@@ -535,6 +605,10 @@
               "label": "Base URL",
               "description": "应用的部署地址，如 '/my-app/'。如果留空，所有资源将使用相对路径。"
             },
+            "publicPath": {
+              "label": "公共路径",
+              "description": "你的应用将被部署在例如'/my-app/'这样的base URL。使用空字符串('')来使用相对路径访问静态资源。"
+            },
             "outputDir": {
               "label": "输出目录",
               "description": "构建产生的文件将会生成在这里。"
@@ -545,11 +619,11 @@
             },
             "runtimeCompiler": {
               "label": "启用运行时编译",
-              "description": "This will allow you to use the template option in Vue components, but will incur around an extra 10kb payload for your app."
+              "description": "这将允许您在Vue组件中使用模板选项，但会为您的应用带来额外的10kb开销。"
             },
             "productionSourceMap": {
-              "label": "Enable Production Source Maps",
-              "description": "Disabling this can speed up production builds if you don't need source maps for production"
+              "label": "启用生产环境的Source Maps",
+              "description": "如果您不需要生产环境的Source Maps，则禁用此选项可以加快生产构建"
             },
             "parallel": {
               "label": "并行编译",
@@ -647,6 +721,10 @@
             "appleMobileWebAppStatusBarStyle": {
               "message": "Apple 状态栏样式",
               "description": "iOS webapp 状态栏样式"
+            },
+            "manifestCrossorigin": {
+              "message": "manifest.json的属性值链接标签的跨域属性",
+              "description": "Value for `crossoriging` attribute in manifest link tag in the generated HTML, you may need to set this if your pwa is behind an authenticated proxy"
             }
           }
         },
@@ -694,6 +772,103 @@
           "test": {
             "description": "运行 Mocha 单元测试",
             "watch": "监听文件变化并重新运行测试"
+          }
+        }
+      },
+      "widgets": {
+        "welcome": {
+          "title": "欢迎提示",
+          "description": "一些提示可以帮助您入门",
+          "content": {
+            "title": "欢迎来到您的新项目！",
+            "tip1": "您正在查看可以放置widgets的项目控制台仪表板。使用“自定义”按钮添加更多！一切都是自动保存的",
+            "tip2": "左侧是不同的可用页面。 “插件”允许您添加新的Vue CLI插件，“运行依赖”可以管理包，“配置”可以用于配置工具，最后“任务”可以用来运行脚本（比如webpack脚本）。",
+            "tip3": "使用屏幕左上角的下拉菜单或底部状态栏中的主页按钮返回项目管理。",
+            "ok": "我知道了"
+          }
+        },
+        "kill-port": {
+          "title": "终止端口",
+          "description": "终止使用特定网络端口的进程",
+          "input": {
+            "placeholder": "请输入网络端口号"
+          },
+          "kill": "终止",
+          "status": {
+            "idle": "准备终止",
+            "killing": "正在终止……",
+            "killed": "终止成功！",
+            "error": "无法终止"
+          }
+        },
+        "status-widget": {
+          "last-updated": "已更新",
+          "never": "还未更新",
+          "check": "检查更新",
+          "more-info": "更多详情"
+        },
+        "plugin-updates": {
+          "title": "更新插件",
+          "description": "监测插件更新",
+          "messages": {
+            "ok": "全部插件已更新至最新",
+            "loading": "正在检查更新……",
+            "attention": "{n}个插件更新可用"
+          },
+          "page": "转至插件页"
+        },
+        "dependency-updates": {
+          "title": "依赖更新",
+          "description": "监测依赖更新",
+          "messages": {
+            "ok": "全部依赖已更新至最新",
+            "loading": "正在检查更新……",
+            "attention": "{n}个依赖更新可用"
+          },
+          "page": "转至依赖页"
+        },
+        "vulnerability": {
+          "title": "漏洞检测",
+          "description": "检查项目依赖项中的已知漏洞",
+          "messages": {
+            "ok": "没有发现漏洞",
+            "loading": "检测项目安全性中……",
+            "attention": "发现了{n}个漏洞",
+            "error": "无法检查漏洞"
+          },
+          "severity": {
+            "critical": "最为严重",
+            "high": "严重程度高",
+            "moderate": "严重程度中",
+            "low": "严重程度低"
+          },
+          "direct-dep": "直接依赖",
+          "versions": {
+            "vulnerable": "易受攻击的版本：",
+            "patched": "应打补丁版本："
+          },
+          "recheck": "再检查一遍"
+        },
+        "run-task": {
+          "title": "运行任务",
+          "description": "运行任务的快捷方式",
+          "prompts": {
+            "task": "选择一个任务"
+          },
+          "page": "转至任务页"
+        },
+        "news": {
+          "title": "新闻提要",
+          "description": "阅读新闻提要",
+          "refresh": "强制刷新",
+          "select-tip": "选择左侧的选项",
+          "prompts": {
+            "url": "RSS摘要URL或GitHub repository"
+          },
+          "errors": {
+            "fetch": "无法获取摘要",
+            "offline": "您正处于离线状态",
+            "empty": "无效的摘要"
           }
         }
       }
