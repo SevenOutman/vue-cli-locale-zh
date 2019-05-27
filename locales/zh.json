@@ -781,94 +781,94 @@
           "description": "一些提示可以帮助您入门",
           "content": {
             "title": "欢迎来到您的新项目！",
-            "tip1": "You are looking at the project dashboard where you can put widgets. Use the 'Customize' button to add more! Everything is automatically saved.",
-            "tip2": "On the left are the different available pages. 'Plugins' let you add new Vue CLI plugins, 'Dependencies' for managing the packages, 'Configuration' to configure the tools and 'Tasks' to run scripts (for example webpack).",
-            "tip3": "Return to the project manager with the dropdown at the top left of the screen or the home button in the status bar at the bottom.",
-            "ok": "Understood"
+            "tip1": "您正在查看可以放置widgets的项目控制台仪表板。使用“自定义”按钮添加更多！一切都是自动保存的",
+            "tip2": "左侧是不同的可用页面。 “插件”允许您添加新的Vue CLI插件，“运行依赖”可以管理包，“配置”可以用于配置工具，最后“任务”可以用来运行脚本（比如webpack脚本）。",
+            "tip3": "使用屏幕左上角的下拉菜单或底部状态栏中的主页按钮返回项目管理。",
+            "ok": "我知道了"
           }
         },
         "kill-port": {
-          "title": "Kill port",
-          "description": "Kill processes using a specific network port",
+          "title": "终止端口",
+          "description": "终止使用特定网络端口的进程",
           "input": {
-            "placeholder": "Enter a network port"
+            "placeholder": "请输入网络端口号"
           },
-          "kill": "Kill",
+          "kill": "终止",
           "status": {
-            "idle": "Ready to kill",
-            "killing": "Killing process...",
-            "killed": "Killed successfully!",
-            "error": "Couldn't kill process"
+            "idle": "准备终止",
+            "killing": "正在终止……",
+            "killed": "终止成功！",
+            "error": "无法终止"
           }
         },
         "status-widget": {
-          "last-updated": "Updated",
-          "never": "Not updated yet",
-          "check": "Check for updates",
-          "more-info": "More details"
+          "last-updated": "已更新",
+          "never": "还未更新",
+          "check": "检查更新",
+          "more-info": "更多详情"
         },
         "plugin-updates": {
-          "title": "Plugin updates",
-          "description": "Monitor plugin updates",
+          "title": "更新插件",
+          "description": "监测插件更新",
           "messages": {
-            "ok": "All plugins up-to-date",
-            "loading": "Checking for updates...",
-            "attention": "{n} plugin updates available"
+            "ok": "全部插件已更新至最新",
+            "loading": "正在检查更新……",
+            "attention": "{n}个插件更新可用"
           },
-          "page": "Go to Plugins"
+          "page": "转至插件页"
         },
         "dependency-updates": {
-          "title": "Dependency updates",
-          "description": "Monitor dependencies updates",
+          "title": "依赖更新",
+          "description": "监测依赖更新",
           "messages": {
-            "ok": "All dependencies up-to-date",
-            "loading": "Checking for updates...",
-            "attention": "{n} dependency updates available"
+            "ok": "全部依赖已更新至最新",
+            "loading": "正在检查更新……",
+            "attention": "{n}个依赖更新可用"
           },
-          "page": "Go to Dependencies"
+          "page": "转至依赖页"
         },
         "vulnerability": {
-          "title": "Vulnerability check",
-          "description": "Check for known vulnerabilities in your project dependencies",
+          "title": "漏洞检测",
+          "description": "检查项目依赖项中的已知漏洞",
           "messages": {
-            "ok": "No vulnerability found",
-            "loading": "Auditing project security...",
-            "attention": "{n} vulnerabilities found",
-            "error": "Couldn't check for vulnerability"
+            "ok": "没有发现漏洞",
+            "loading": "检测项目安全性中……",
+            "attention": "发现了{n}个漏洞",
+            "error": "无法检查漏洞"
           },
           "severity": {
-            "critical": "Critical severity",
-            "high": "High severity",
-            "moderate": "Medium severity",
-            "low": "Low severity"
+            "critical": "最为严重",
+            "high": "严重程度高",
+            "moderate": "严重程度中",
+            "low": "严重程度低"
           },
-          "direct-dep": "Direct dependency",
+          "direct-dep": "直接依赖",
           "versions": {
-            "vulnerable": "Vulnerable versions:",
-            "patched": "Patched versions:"
+            "vulnerable": "易受攻击的版本：",
+            "patched": "应打补丁版本："
           },
-          "recheck": "Check again"
+          "recheck": "再检查一遍"
         },
         "run-task": {
-          "title": "Run task",
-          "description": "Shortcut to run a task",
+          "title": "运行任务",
+          "description": "运行任务的快捷方式",
           "prompts": {
-            "task": "Select a task"
+            "task": "选择一个任务"
           },
-          "page": "Go to Task"
+          "page": "转至任务页"
         },
         "news": {
-          "title": "News feed",
-          "description": "Read news feed",
-          "refresh": "Force refresh",
-          "select-tip": "Select an item on the left",
+          "title": "新闻提要",
+          "description": "阅读新闻提要",
+          "refresh": "强制刷新",
+          "select-tip": "选择左侧的选项",
           "prompts": {
-            "url": "RSS feed URL or GitHub repository"
+            "url": "RSS摘要URL或GitHub repository"
           },
           "errors": {
-            "fetch": "Couldn't fetch feed",
-            "offline": "You are offline",
-            "empty": "Empty feed"
+            "fetch": "无法获取摘要",
+            "offline": "您正处于离线状态",
+            "empty": "无效的摘要"
           }
         }
       }
